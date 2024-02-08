@@ -12,11 +12,11 @@ const theatreRoutes = require("./routes/theatreRoutes");
 const bookingRoutes = require("./routes/bookingRoutes");
 
 
-//app.use(cors());
-app.use(cors({
-    origin: 'http://localhost:3000', // Allow requests from this origin
-    credentials: true // Allow sending credentials (cookies, authorization headers, etc.) with requests
-}));
+app.use(cors());
+// app.use(cors({
+//     origin: 'http://localhost:3000', // Allow requests from this origin
+//     credentials: true // Allow sending credentials (cookies, authorization headers, etc.) with requests
+// }));
 app.use(express.json());
 app.use('/api/user', userRoute);
 app.use("/api/movie", movieRoutes);
